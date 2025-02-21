@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KidCalc</title>
+    <link id="themeStylesheet" rel="stylesheet" href="./css/theme1.css">
+</head>
+<body>
+    <header><img src="download.png" style="height: 50px;width: 50px; border-radius: 15px;"><h1>KidCalc - Fun Learning Calculator</h1>
+    <p>Your kid's area of math and fun</p></header>
+    <main class="container">
+
+        <section>
+            <table id="calcu"> 
+                <tr> 
+                    <td colspan="3">
+                        <input type="text" id="result"> 
+                    </td> 
+                    <td><input type="button" value="c"></td> 
+                </tr> 
+                <tr> 
+                    <td><input type="button" value="1"></td> 
+                    <td><input type="button" value="2"></td> 
+                    <td><input type="button" value="3"></td> 
+                    <td><input type="button" value="/"></td> 
+                </tr> 
+                <tr> 
+                    <td><input type="button" value="4"></td> 
+                    <td><input type="button" value="5"></td> 
+                    <td><input type="button" value="6"></td> 
+                    <td><input type="button" value="*"></td> 
+                </tr> 
+                <tr> 
+                    <td><input type="button" value="7"></td> 
+                    <td><input type="button" value="8"></td> 
+                    <td><input type="button" value="9"></td> 
+                    <td><input type="button" value="-"></td> 
+                </tr> 
+                <tr> 
+                    <td><input type="button" value="0"></td> 
+                    <td><input type="button" value="."></td> 
+                    <td><input type="button" value="="></td> 
+                    <td><input type="button" value="+"></td> 
+                </tr> 
+            </table> 
+        </section>
+        <section>
+            <img src="login.png" style="height: 50px;width: 50px; border-radius: 15px;">
+            <h2>login</h2>
+            <form id="registrationForm">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required><br><br>
+
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required><br><br>
+
+                <label for="password_confirmation">Confirm Password:</label>
+                <input type="password" name="password_confirmation" id="password_confirmation" required><br><br>
+
+                <button type="submit">Register</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <button id="theme-button">Themes</button>
+    </footer>
+
+    <!-- Move script here to ensure elements are loaded before execution -->
+    <script>
+        const themes = ["./css/theme1.css", "./css/theme2.css", "./css/theme3.css"]; // List of theme files
+        let currentThemeIndex = 0; // Track current theme
+
+        document.getElementById("theme-button").addEventListener("click", function() {
+            currentThemeIndex = (currentThemeIndex + 1) % themes.length; // Cycle through themes
+            document.getElementById("themeStylesheet").setAttribute("href", themes[currentThemeIndex]);
+        });
+    </script>
+</body>
+</html>

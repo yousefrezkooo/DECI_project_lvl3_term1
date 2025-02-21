@@ -1,0 +1,10 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-image: url(https://wintrcat.uk/js/2e75a219a17183355fcb.png);
+    background-position: center;
+    background-size: cover;
+    color:aliceblue;
+    font-family: "Atkinson Hyperlegible", Arial, sans-serif;
+
+}

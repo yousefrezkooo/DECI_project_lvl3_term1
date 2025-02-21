@@ -1,0 +1,25 @@
+body {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Main content takes 2 parts, sidebar takes 1 part */
+    grid-template-rows: auto; /* Adjusts row height based on content */
+    background-image: url(https://wintrcat.uk/js/2e75a219a17183355fcb.png);
+    background-position: center;
+    background-size: cover;
+    color: aliceblue;
+    font-family: "Atkinson Hyperlegible", Arial, sans-serif;
+}
+
+article {
+    grid-column: 1 / 2; /* Place article in the first column */
+}
+
+.sidebar {
+    padding: 20px;
+    grid-column: 2; /* Place sidebar in the second column */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a background color for contrast */
+}
+img {
+    width: 200px;
+    height: auto;
+    border-radius: 15px;
+}
