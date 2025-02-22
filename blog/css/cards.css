@@ -1,41 +1,87 @@
 body {
     display: grid;
-    grid-template-columns: 1fr; /* One column for the body */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
     background-image: url(https://wintrcat.uk/js/2e75a219a17183355fcb.png);
     background-position: center;
     background-size: cover;
     color: #D9D4CE;
     font-family: "Atkinson Hyperlegible", Arial, sans-serif;
-    height: 100vh; /* Ensure the body takes the full height */
-    margin: 0; /* Remove default margin */
+    margin: 0;
+    
+}
+
+/* Header & Footer */
+header, footer {
+    border: 1px solid #46A7D8;
+    padding: 10px;
+    border-radius: 15px;
+     font-weight: 200;
+}
+h1{
+    font-weight: 200;
 }
 
 header {
-    grid-column: 1 / 3;
-    border: 1px solid #46A7D8;
-    padding: 10px;
-    border-radius: 15px;
-}
-nav{
     display: flex;
     justify-content: space-between;
-}
-footer {
-    border: 1px solid #46A7D8;
-    padding: 10px;
-    border-radius: 15px;
-    grid-column: 1 / 3;
-    margin-top: auto;
+    align-items: center;
 }
 
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+
+}
+
+nav ul li {
+    padding: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #46A7D8;
+}
+
+/* Main Layout */
 main {
     display: grid;
-    grid-template-columns: 3fr 1fr; /* Adjusted columns: 3fr for content and 1fr for sidebar */
-    gap: 20px; /* Space between the columns */
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
     padding: 20px;
-    grid-column: 1 / 3; /* Span the whole body width */
+    overflow: auto;
 }
 
+/* Sidebar */
+.sidebar {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.sidebar-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Content */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Content Cards */
 .card {
     border: 1px solid #46A7D8;
     padding: 10px;
@@ -43,70 +89,79 @@ main {
     border-radius: 15px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0; /* Reset padding for ul */
-    display: flex;
-    justify-content: space-around;
-    margin: auto;
-}
-a:hover {
-    color: #46A7D8;
-}
-a {
-    text-decoration: none;
-    color: white;
-}
-
-.classico {
-    margin: 0 15px;
-    line-height: 0.9;
-    font-family: "Atkinson Hyperlegible", Arial, sans-serif;
-}
-
-.sidebar {
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1); /* Optional: semi-transparent background */
-    border-radius: 15px; /* Add border radius for a nicer look */
-}
-p{
-    font-family: "Roboto Mono", monospace;
-}
+/* Images */
 img {
-    width: 200px;
+    max-width: 100%;
     height: auto;
-    border-radius: 15px;
+    border-radius: 10px;
+    display: block;
 }
-/* Media Queries for Responsiveness */
+
+/* Responsive Design */
 @media (max-width: 768px) {
     main {
-        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+        grid-template-columns: 1fr;
+        padding: 10px;
     }
 
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 5px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        margin: 5px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        padding: 5px 15px;
+    }
+
+    footer {
+        padding: 5px;
+        font-size: 0.9rem;
+    }
+
+    /* Make the sidebar more compact on mobile */
     .sidebar {
-        order: 2; /* Move sidebar below content */
+        padding: 10px;
     }
 
-    .content {
-        order: 1; /* Ensure content is on top */
+    .sidebar h2 {
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+
+    .sidebar h3 {
+        font-size: 1.1rem;
+        margin: 8px 0;
+    }
+
+    .sidebar p {
+        margin: 8px 0;
+    }
+
+    /* Adjust card spacing */
+    .card {
+        margin: 5px 0;
+        padding: 8px;
+    }
+
+    .card h2 {
+        font-size: 1.2rem;
+        margin: 5px 0;
     }
 }
 
 @media (max-width: 480px) {
-    header {
-        text-align: center; /* Center header content */
-    }
-
-    .classico {
-        font-size: 24px; /* Smaller title on mobile */
-    }
-
-    footer {
-        font-size: 14px; /* Smaller footer text */
-    }
-
     .card {
-        margin: 5px; /* Reduce card margin */
+        margin: 5px;
     }
 }
-
