@@ -1,14 +1,114 @@
 body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
     background-image: url(https://wintrcat.uk/js/2e75a219a17183355fcb.png);
     background-position: center;
     background-size: cover;
-    color: aliceblue;
+    color: #D9D4CE;
     font-family: "Atkinson Hyperlegible", Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    display: flex; /* Centers content */
-    justify-content: center;
+    
 }
+i {
+    font-size: 30px;
+    color: #D9D4CE;
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+p{
+    margin:10px
+}
+
+i:hover {
+    color: blue;
+}
+
+/* Header & Footer */
+header, footer {
+    border: 1px solid #46A7D8;
+    padding: 10px;
+    border-radius: 15px;
+     font-weight: 200;
+}
+h1{
+    font-weight: 200;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation */
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for the navigation bar */
+nav {
+    background-color:transparent;
+    padding: 10px 0;
+}
+
+/* Ensure the list items are aligned properly */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    justify-content: center;
+    gap: 20px; /* Space between items */
+    padding: 0;
+}
+
+/* Align individual items properly */
+nav ul li {
+    display: flex;
+    align-items: center; /* Aligns icons and text in a row */
+}
+
+/* Styling for text links */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center; /* Ensures text & icons align */
+    padding: 8px 12px;
+}
+
+/* Styling for icons */
+nav ul li i {
+    font-size: 24px; 
+    color: #D9D4CE;
+    transition: color 0.3s;
+}
+
+
+/* Space between icon and text if inside the same link */
+nav ul li a i {
+    margin-right: 5px;
+}
+
+/* Hover effect */
+nav ul li a:hover,
+nav ul li i:hover {
+    color: blue;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #46A7D8;
+}
+
 
 main {
     display: grid;
@@ -18,6 +118,104 @@ main {
     max-width: 1000px;
     padding: 20px;
 }
+i {
+    font-size: 30px;
+    color: #D9D4CE;
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+p{
+    margin:10px
+}
+
+i:hover {
+    color: blue;
+}
+
+/* Header & Footer */
+header, footer {
+    border: 1px solid #46A7D8;
+    padding: 10px;
+    border-radius: 15px;
+     font-weight: 200;
+}
+h1{
+    font-weight: 200;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation */
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for the navigation bar */
+nav {
+    background-color:transparent;
+    padding: 10px 0;
+}
+
+/* Ensure the list items are aligned properly */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    justify-content: center;
+    gap: 20px; /* Space between items */
+    padding: 0;
+}
+
+/* Align individual items properly */
+nav ul li {
+    display: flex;
+    align-items: center; /* Aligns icons and text in a row */
+}
+
+/* Styling for text links */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center; /* Ensures text & icons align */
+    padding: 8px 12px;
+}
+
+/* Styling for icons */
+nav ul li i {
+    font-size: 24px; 
+    color: #D9D4CE;
+    transition: color 0.3s;
+}
+
+
+/* Space between icon and text if inside the same link */
+nav ul li a i {
+    margin-right: 5px;
+}
+
+/* Hover effect */
+nav ul li a:hover,
+nav ul li i:hover {
+    color: blue;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #46A7D8;
+}
+
 
 .sidebar {
     padding: 20px;
