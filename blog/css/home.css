@@ -17,6 +17,9 @@ i {
     margin-right: 10px;
     transition: color 0.3s;
 }
+p{
+    margin:10px
+}
 
 i:hover {
     color: blue;
