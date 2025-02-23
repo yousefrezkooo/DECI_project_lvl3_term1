@@ -11,6 +11,16 @@ body {
     margin: 0;
     
 }
+i {
+    font-size: 30px;
+    color: #D9D4CE;
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+
+i:hover {
+    color: blue;
+}
 
 /* Header & Footer */
 header, footer {
@@ -30,19 +40,63 @@ header {
 }
 
 /* Navigation */
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
+/* Reset default styles */
+* {
     margin: 0;
-
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Styling for the navigation bar */
+nav {
+    background-color:transparent;
+    padding: 10px 0;
+}
+
+/* Ensure the list items are aligned properly */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    justify-content: center;
+    gap: 20px; /* Space between items */
+    padding: 0;
+}
+
+/* Align individual items properly */
 nav ul li {
-    padding: 15px;
+    display: flex;
+    align-items: center; /* Aligns icons and text in a row */
 }
 
+/* Styling for text links */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center; /* Ensures text & icons align */
+    padding: 8px 12px;
+}
+
+/* Styling for icons */
+nav ul li i {
+    font-size: 24px; 
+    color: #D9D4CE;
+    transition: color 0.3s;
+}
+
+
+/* Space between icon and text if inside the same link */
+nav ul li a i {
+    margin-right: 5px;
+}
+
+/* Hover effect */
+nav ul li a:hover,
+nav ul li i:hover {
+    color: blue;
+}
 a {
     text-decoration: none;
     color: white;
